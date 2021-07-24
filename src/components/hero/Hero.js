@@ -1,6 +1,9 @@
 import React from 'react';
 import './HeroStyle.css';
 
+import ReactTypingEffect from 'react-typing-effect';
+
+
 
 const Hero = () => {
     return (
@@ -12,8 +15,26 @@ const Hero = () => {
                             <div className="hero-text">
                                 <p>I'm</p>
                                 <h1>Kate Winslet</h1>
-                                {/* <h2></h2>
-                                <div className="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div> */}
+
+                                <ReactTypingEffect
+                                    text={["Web Designer", "Web Developer", "Front End Developer", "Apps Designer","Apps Developer"]}
+                                    cursorRenderer={cursor => <h2>{cursor}</h2>}
+                                    displayTextRenderer={(text, i) => {
+                                        return (
+                                            <h2>
+                                                {text.split('').map((char, i) => {
+                                                    const key = `${i}`;
+                                                    return (
+                                                        <span
+                                                            key={key}
+                                                        >{char}</span>
+                                                    );
+                                                })}
+                                            </h2>
+                                        );
+                                    }}
+                                />
+                               
                             </div>
                             <div className="hero-btn">
                                 <a className="btn" href="">Hire Me</a>
@@ -23,7 +44,7 @@ const Hero = () => {
                     </div>
                     <div className="col-sm-12 col-md-6 d-none d-md-block">
                         <div className="hero-image">
-                            <img src="assets/img/hero.png" alt="Hero Image"/>
+                            <img src="assets/img/hero.png" alt="Hero Image" />
                         </div>
                     </div>
                 </div>
