@@ -1,9 +1,6 @@
 import React from 'react';
 import './HeroStyle.css';
-
-import ReactTypingEffect from 'react-typing-effect';
-
-
+import CursorTypingEffect from './cursorTypingEffact/CursorTypingEffect';
 
 const Hero = () => {
     return (
@@ -15,26 +12,7 @@ const Hero = () => {
                             <div className="hero-text">
                                 <p>I'm</p>
                                 <h1>Kate Winslet</h1>
-
-                                <ReactTypingEffect
-                                    text={["Web Designer", "Web Developer", "Front End Developer", "Apps Designer","Apps Developer"]}
-                                    cursorRenderer={cursor => <h2>{cursor}</h2>}
-                                    displayTextRenderer={(text, i) => {
-                                        return (
-                                            <h2>
-                                                {text.split('').map((char, i) => {
-                                                    const key = `${i}`;
-                                                    return (
-                                                        <span
-                                                            key={key}
-                                                        >{char}</span>
-                                                    );
-                                                })}
-                                            </h2>
-                                        );
-                                    }}
-                                />
-                               
+                                <CursorTypingEffect />
                             </div>
                             <div className="hero-btn">
                                 <a className="btn" href="">Hire Me</a>
