@@ -1,0 +1,14 @@
+.progress {
+	background-color: #dddddd;
+	border-radius: 10px;
+	position: relative;
+	height: 10px;
+}
+
+.progress-done {
+	background: #EF233C;
+	border-radius: 10px;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.3s;
+}
