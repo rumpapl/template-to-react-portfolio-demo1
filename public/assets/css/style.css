@@ -414,7 +414,7 @@ a:focus {
 /*******************************/
 /******* Section Header ********/
 /*******************************/
-.section-header {
+/* .section-header {
     position: relative;
     margin-bottom: 45px;
 }
@@ -465,7 +465,7 @@ a:focus {
     .section-header h2 {
         font-size: 30px;
     }
-}
+} */
 
 
 /*******************************/
