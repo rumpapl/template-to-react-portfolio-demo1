@@ -4,8 +4,8 @@ import SectionHeader from '../sharedComponents/sectionHeader/SectionHeader';
 
 const Services = () => {
     const [header_data] = React.useState({
-        p: "Learn About Me",
-        h: '10 Years Experience',
+        p: "What I do",
+        h: 'Awesome Quality Services',
     });
     return (
         <div class="service" id="service">
