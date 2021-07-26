@@ -1,13 +1,17 @@
 import React from 'react';
 import './ServicesStyle.css';
+import SectionHeader from '../sharedComponents/sectionHeader/SectionHeader';
 
 const Services = () => {
+    const [header_data] = React.useState({
+        p: "Learn About Me",
+        h: '10 Years Experience',
+    });
     return (
         <div class="service" id="service">
             <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What I do</p>
-                    <h2>Awesome Quality Services</h2>
+                <div class="text-center wow zoomIn" data-wow-delay="0.1s">
+                   <SectionHeader header_data={header_data}/>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
