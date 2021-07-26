@@ -1,9 +1,10 @@
 import React from 'react';
 import './ExperiencesStyle.css';
 import SectionHeader from '../sharedComponents/sectionHeader/SectionHeader';
+import { experiences } from '../../data/Experiences';
 
 const Experiences = () => {
-
+    const [Experiences] = React.useState(experiences);
     const [header_data] = React.useState({
         p: "My Resume",
         h: 'Working Experience',
@@ -15,66 +16,30 @@ const Experiences = () => {
                     <SectionHeader header_data={header_data} />
                 </header>
                 <div class="timeline">
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">2045 - 2050</div>
-                            <h2>Web Developer</h2>
-                            <h4>Soft Agency, San Francisco, CA</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-                            </p>
-                        </div>
-                    </div>
+                    {Experiences.map((item) =>
+                        <>
+                            {
+                                item.id % 2 === 0 ?
+                                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                                        <div class="timeline-text">
+                                            <div class="timeline-date">{item.time_line}</div>
+                                            <h2>{item.job_title}</h2>
+                                            <h4>{item.company_name}</h4>
+                                            <p>{item.description}</p>
+                                        </div>
+                                    </div>
+                                    :
+                                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                                        <div class="timeline-text">
+                                            <div class="timeline-date">{item.time_line}</div>
+                                            <h2>{item.job_title}</h2>
+                                            <h4>{item.company_name}</h4>
+                                            <p>{item.description}</p>
+                                        </div>
+                                    </div>
+                            }
+                        </>
+                    )}
                 </div>
             </div>
         </div>
