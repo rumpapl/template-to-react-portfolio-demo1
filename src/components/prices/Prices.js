@@ -1,102 +1,32 @@
 import React from 'react';
 import './PricesStyle.css';
+import { prices } from '../../data/Prices';
+import PriceCard from './priceCard/PriceCard';
 
 const Prices = () => {
+    const [Prices] = React.useState(prices);
     return (
         <div class="price" id="price">
-        <div class="container">
-            <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                <p>Pricing Plan</p>
-                <h2>Affordable Price</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class="price-header">
-                            <div class="price-title">
-                                <h2>Basic</h2>
-                            </div>
-                            <div class="price-prices">
-                                <h2><small>$</small>49<span>/ mo</span></h2>
-                            </div>
-                        </div>
-                        <div class="price-body">
-                            <div class="price-description">
-                                <ul>
-                                    <li>Bootstrap 4</li>
-                                    <li>Font Awesome 5</li>
-                                    <li>Responsive Design</li>
-                                    <li>Browser Compatibility</li>
-                                    <li>Easy To Use</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="price-footer">
-                            <div class="price-action">
-                                <a class="btn" href="">Order Now</a>
-                            </div>
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Pricing Plan</p>
+                    <h2>Affordable Price</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <PriceCard card_data={Prices[0]} />
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="price-item featured-item">
+                            <PriceCard card_data={Prices[1]} />
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
-                    <div class="price-item featured-item">
-                        <div class="price-header">
-                            <div class="price-title">
-                                <h2>Standard</h2>
-                            </div>
-                            <div class="price-prices">
-                                <h2><small>$</small>99<span>/ mo</span></h2>
-                            </div>
-                        </div>
-                        <div class="price-body">
-                            <div class="price-description">
-                                <ul>
-                                    <li>Bootstrap 4</li>
-                                    <li>Font Awesome 5</li>
-                                    <li>Responsive Design</li>
-                                    <li>Browser Compatibility</li>
-                                    <li>Easy To Use</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="price-footer">
-                            <div class="price-action">
-                                <a class="btn" href="">Order Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="price-item">
-                        <div class="price-header">
-                            <div class="price-title">
-                                <h2>Premium</h2>
-                            </div>
-                            <div class="price-prices">
-                                <h2><small>$</small>149<span>/ mo</span></h2>
-                            </div>
-                        </div>
-                        <div class="price-body">
-                            <div class="price-description">
-                                <ul>
-                                    <li>Bootstrap 4</li>
-                                    <li>Font Awesome 5</li>
-                                    <li>Responsive Design</li>
-                                    <li>Browser Compatibility</li>
-                                    <li>Easy To Use</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="price-footer">
-                            <div class="price-action">
-                                <a class="btn" href="">Order Now</a>
-                            </div>
-                        </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <PriceCard card_data={Prices[2]} />
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     )
 }
 
