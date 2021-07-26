@@ -727,7 +727,7 @@ a:focus {
 /*******************************/
 /********* Service CSS *********/
 /*******************************/
-.service {
+/* .service {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
@@ -801,7 +801,7 @@ a:focus {
     .service .service-text p {
         font-size: 14px;
     }
-}
+} */
 
 
 /*******************************/
