@@ -2,6 +2,7 @@ import React from 'react';
 import './ExperiencesStyle.css';
 import SectionHeader from '../sharedComponents/sectionHeader/SectionHeader';
 import { experiences } from '../../data/Experiences';
+import Banner from '../sharedComponents/banner/Banner';
 
 const Experiences = () => {
     const [Experiences] = React.useState(experiences);
@@ -9,7 +10,14 @@ const Experiences = () => {
         p: "My Resume",
         h: 'Working Experience',
     });
+    const[banner_info] = React.useState({
+        p: "Reasonable Price",
+        h: 'Get A Special Price',
+        Btn_text: 'Pricing Plan',
+        banner_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.",
+    })
     return (
+        <>
         <div class="experience" id="experience">
             <div class="container">
                 <header class="text-center wow zoomIn" data-wow-delay="0.1s">
@@ -43,7 +51,8 @@ const Experiences = () => {
                 </div>
             </div>
         </div>
-
+        <Banner  banner_info={banner_info}/>
+</>
     )
 }
 
