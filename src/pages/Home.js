@@ -7,6 +7,7 @@ import Services from '../components/services/Services';
 import Contact from '../components/contacts/Contact';
 import Prices from '../components/prices/Prices';
 import Footer from '../components/footer/Footer';
+import BackBtn from '../components/sharedComponents/backButton/BackBtn';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
         <Contact />
         <Prices />
         <Footer />
+        <BackBtn />
     </>
     )
 }
