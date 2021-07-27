@@ -1462,7 +1462,7 @@ a:focus {
 /*******************************/
 /********* Footer CSS **********/
 /*******************************/
-.footer {
+/* .footer {
     position: relative;
     margin-top: 45px;
     background: #EF233C;
@@ -1588,4 +1588,4 @@ a:focus {
         line-height: 16px;
         padding: 0 5px;
     }
-}
+} */
