@@ -15,11 +15,11 @@ const NavBar = () => {
                             <a href="#about" className="nav-item nav-link">About</a>
                             <a href="#service" className="nav-item nav-link">Service</a>
                             <a href="#experience" className="nav-item nav-link">Experience</a>
-                            <a href="#portfolio" className="nav-item nav-link">Portfolio</a>
+                            {/* <a href="#portfolio" className="nav-item nav-link">Portfolio</a> */}
                             <a href="#price" className="nav-item nav-link">Price</a>
-                            <a href="#review" className="nav-item nav-link">Review</a>
+                            {/* <a href="#review" className="nav-item nav-link">Review</a>
                             <a href="#team" className="nav-item nav-link">Team</a>
-                            <a href="#blog" className="nav-item nav-link">Blog</a>
+                            <a href="#blog" className="nav-item nav-link">Blog</a> */}
                             <a href="#contact" className="nav-item nav-link">Contact</a>
                         </div>
                     </div>
